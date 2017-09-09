@@ -16,11 +16,11 @@
             android:title="@string/jp_tv" />
         <item
             android:id="@+id/action_variety"
-            android:icon="@drawable/ic_face_black_24dp"
+            android:icon="@drawable/ic_remove_from_queue_black_24dp"
             android:title="@string/variety" />
         <item
             android:id="@+id/action_music"
-            android:icon="@drawable/ic_queue_music_black_24dp"
+            android:icon="@drawable/ic_music_black_24dp"
             android:title="@string/music" />
         <item
             android:id="@+id/action_collection"
@@ -28,7 +28,7 @@
             android:title="@string/collection" />
         <item
             android:id="@+id/action_other"
-            android:icon="@drawable/ic_clear_all_black_24dp"
+            android:icon="@drawable/ic_devices_other_black_24dp"
             android:title="@string/other" />
     </group>
 

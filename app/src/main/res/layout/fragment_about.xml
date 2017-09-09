@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/v8dp"
+        android:paddingStart="@dimen/v8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/v8dp"
+            android:background="@drawable/bg_item">
+
+            <ImageView
+                android:layout_width="@dimen/v64dp"
+                android:layout_height="@dimen/v64dp"
+                android:layout_margin="@dimen/v8dp"
+                android:src="@mipmap/app_icon"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:layout_width="@dimen/v2dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/v16dp"
+                android:background="#787878" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:shadowColor="#60606060"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="10"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/v36sp"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/v8dp"
+            android:background="@drawable/bg_item"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/v8dp"
+                android:text="@string/source" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/v2dp"
+                android:layout_gravity="center"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/text_view_acg_rip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/v8dp"
+                android:text="@string/app_name"
+                android:textSize="@dimen/v12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/v8dp"
+            android:background="@drawable/bg_item"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/v8dp"
+                android:text="@string/thx" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/v2dp"
+                android:layout_gravity="center"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/v8dp"
+                android:padding="@dimen/v8dp"
+                android:text="@string/thx_content"
+                android:textSize="@dimen/v12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/v8dp"
+            android:background="@drawable/bg_item"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/v8dp"
+                android:text="@string/is_good" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/v2dp"
+                android:layout_gravity="center"
+                android:background="@color/colorAccent" />
+
+
+            <TextView
+                android:id="@+id/text_view_grade_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/v8dp"
+                android:text="@string/grade_app"
+                android:textSize="@dimen/v12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/v96dp"
+            android:layout_marginTop="@dimen/v8dp"
+            android:background="@drawable/bg_item"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/v8dp"
+                android:text="@string/version" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/v2dp"
+                android:layout_gravity="center"
+                android:background="@color/colorAccent" />
+
+
+            <TextView
+                android:id="@+id/text_view_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/v8dp"
+                android:textSize="@dimen/v12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

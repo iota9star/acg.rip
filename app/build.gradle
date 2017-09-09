@@ -29,7 +29,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.0.0'
     compile 'com.android.support:design:26.0.0'
-    compile 'com.android.support:cardview-v7:26.0.0'
 
     compile 'com.jakewharton:butterknife:latest.release'
     annotationProcessor 'com.jakewharton:butterknife-compiler:latest.release'
@@ -37,5 +36,6 @@ dependencies {
     compile 'com.scwang.smartrefresh:SmartRefreshHeader:latest.release'
     compile 'org.jsoup:jsoup:latest.release'
     compile 'jp.wasabeef:recyclerview-animators:latest.release'
+    compile 'com.liuguangqiang.cookie:library:latest.release'
     testCompile 'junit:junit:4.12'
 }
