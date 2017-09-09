@@ -1,0 +1,14 @@
+<resources>
+    <dimen name="v36dp">36dp</dimen>
+    <dimen name="v12sp">12sp</dimen>
+    <dimen name="v8dp">8dp</dimen>
+    <dimen name="v16dp">16dp</dimen>
+    <dimen name="v10sp">10sp</dimen>
+    <dimen name="v48dp">48dp</dimen>
+    <dimen name="v1dp">1dp</dimen>
+    <dimen name="v4dp">4dp</dimen>
+    <dimen name="v24dp">24dp</dimen>
+    <dimen name="v64dp">64dp</dimen>
+    <dimen name="v16sp">16sp</dimen>
+    <dimen name="v2dp">2dp</dimen>
+</resources>

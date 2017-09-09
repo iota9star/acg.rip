@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "star.iota.acgrip"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 7
+        versionName "Soredemo Sekai wa Utsukushii 7"
+        resConfigs "zh"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.0.0'
+    compile 'com.android.support:design:26.0.0'
+    compile 'com.android.support:cardview-v7:26.0.0'
+
+    compile 'com.jakewharton:butterknife:latest.release'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:latest.release'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:latest.release'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:latest.release'
+    compile 'org.jsoup:jsoup:latest.release'
+    compile 'jp.wasabeef:recyclerview-animators:latest.release'
+    testCompile 'junit:junit:4.12'
+}

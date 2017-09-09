@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ACG.RIP</string>
+    <string name="share">分享</string>
+    <string name="copy">复制到剪切板</string>
+    <string name="open_in_browser">从浏览器打开</string>
+    <string name="search">搜索</string>
+    <string name="about">关于</string>
+    <string name="search_hint">请输入关键字</string>
+    <string name="source">来源</string>
+    <string name="thanks">感谢</string>
+    <string name="thanks_content">感谢ACG.RIP及其所有发布组、感谢开源、感谢所有无私的贡献者</string>
+    <string name="good">觉得不错的话</string>
+    <string name="thumb_up">给我评分</string>
+    <string name="version">版本</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="all">全部</string>
+    <string name="anime">动画</string>
+    <string name="jp_tv">日剧</string>
+    <string name="music">音乐</string>
+    <string name="collection">合集</string>
+    <string name="other">其他</string>
+    <string name="variety">综艺</string>
+    <string name="more">更多</string>
+    <string name="open">打开</string>
+    <string name="alipay">支付宝捐赠</string>
+    <string name="alipay_code">FKX08696X3YPOJFGWKD92E</string>
+</resources>
