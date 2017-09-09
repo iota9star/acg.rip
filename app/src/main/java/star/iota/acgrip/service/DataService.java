@@ -1,4 +1,4 @@
-package star.iota.acgrip.Service;
+package star.iota.acgrip.service;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
@@ -32,7 +32,6 @@ public class DataService {
     }
 
     private List<ItemBean> get(String baseUrl) {
-        System.out.println("url: " + baseUrl);
         try {
             List<ItemBean> beans = new ArrayList<>();
             Elements elements = Jsoup.connect(baseUrl)

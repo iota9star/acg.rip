@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 
 import java.util.List;
 
-import star.iota.acgrip.Service.DataService;
+import star.iota.acgrip.service.DataService;
 
 class ItemPresenter implements ItemContract.Presenter {
 

@@ -7,8 +7,8 @@ android {
         applicationId "star.iota.acgrip"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 7
-        versionName "Soredemo Sekai wa Utsukushii 7"
+        versionCode 6
+        versionName "HELLO, ACG.RIP"
         resConfigs "zh"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }

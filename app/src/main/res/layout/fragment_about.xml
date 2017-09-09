@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+    android:background="#ffffff"
     android:scrollbars="vertical">
 
     <LinearLayout
@@ -38,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:padding="@dimen/v8dp"
                 android:shadowColor="#60606060"
                 android:shadowDx="3"
                 android:shadowDy="3"
@@ -60,7 +61,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/v8dp"
-                android:text="@string/source" />
+                android:text="@string/source"
+                android:textColor="@color/colorAccent" />
 
             <View
                 android:layout_width="match_parent"
@@ -91,7 +93,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/v8dp"
-                android:text="@string/thx" />
+                android:text="@string/thx"
+                android:textColor="@color/colorAccent" />
 
             <View
                 android:layout_width="match_parent"
@@ -120,7 +123,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/v8dp"
-                android:text="@string/is_good" />
+                android:text="@string/is_good"
+                android:textColor="@color/colorAccent" />
 
             <View
                 android:layout_width="match_parent"
@@ -154,7 +158,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/v8dp"
-                android:text="@string/version" />
+                android:text="@string/version"
+                android:textColor="@color/colorAccent" />
 
             <View
                 android:layout_width="match_parent"
