@@ -6,6 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="cookieTitleColor">@color/colorAccent</item>
+        <item name="cookieActionColor">@color/cookieActionColor</item>
+        <item name="cookieMessageColor">@color/cookieMessageColor</item>
+        <item name="cookieBackgroundColor">@color/cookieBackgroundColor</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -16,5 +20,4 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
 </resources>

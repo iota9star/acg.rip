@@ -1,6 +1,7 @@
 package star.iota.acgrip;
 
 public interface Contracts {
+
     int TYPE_ALL = 0;
     String MENU_ALL = "全部";
     int TYPE_ANIME = 1;
@@ -16,7 +17,11 @@ public interface Contracts {
     int TYPE_OTHERS = 9;
     String MENU_OTHERS = "其他";
 
+    String MENU_WEEK = "每周";
+    String URL_WEEK = "https://acg.rip/";
+
     int TYPE_SEARCH = 99;
     String MENU_SEARCH = "搜索：";
-    int TYPE_SUB = 98;
+
+    int TYPE_URL = 98;
 }

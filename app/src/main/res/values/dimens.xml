@@ -13,4 +13,5 @@
     <dimen name="v36sp">36sp</dimen>
     <dimen name="v96dp">96dp</dimen>
     <dimen name="v512dp">512dp</dimen>
+    <dimen name="v48dp">48dp</dimen>
 </resources>

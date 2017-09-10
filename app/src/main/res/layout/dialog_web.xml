@@ -12,5 +12,6 @@
         android:id="@+id/progress_bar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/v4dp" />
+        android:layout_height="@dimen/v4dp"
+        android:layout_gravity="bottom" />
 </FrameLayout>

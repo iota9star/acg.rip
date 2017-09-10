@@ -30,7 +30,7 @@ import star.iota.acgrip.MessageBar;
 import star.iota.acgrip.R;
 import star.iota.acgrip.base.BaseActivity;
 
-public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> {
+class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> {
 
     private final List<ItemBean> items;
 
@@ -40,7 +40,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> 
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false));
+        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_item, parent, false));
     }
 
     @Override
@@ -77,7 +77,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> 
         holder.buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((BaseActivity) holder.context).addFragment(ItemFragment.newInstance(Contracts.TYPE_SUB, item.getSubLink(), item.getSub()));
+                ((BaseActivity) holder.context).addFragment(ItemFragment.newInstance(Contracts.TYPE_URL, item.getSubLink(), item.getSub()));
             }
         });
         holder.buttonInfo.setOnClickListener(new View.OnClickListener() {

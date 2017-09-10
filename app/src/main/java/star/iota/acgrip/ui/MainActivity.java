@@ -18,6 +18,7 @@ import star.iota.acgrip.Contracts;
 import star.iota.acgrip.R;
 import star.iota.acgrip.base.BaseActivity;
 import star.iota.acgrip.ui.about.AboutFragment;
+import star.iota.acgrip.ui.fan.FanFragment;
 import star.iota.acgrip.ui.item.ItemFragment;
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -68,6 +69,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         removeFragmentContainerChildrenViews();
         switch (item.getItemId()) {
+            case R.id.action_week:
+                showFragment(FanFragment.newInstance(Contracts.URL_WEEK, Contracts.MENU_WEEK));
+                break;
             case R.id.action_list:
                 showFragment(ItemFragment.newInstance(Contracts.TYPE_ALL, Contracts.MENU_ALL));
                 break;

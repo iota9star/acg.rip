@@ -21,7 +21,7 @@ class ItemPresenter implements ItemContract.Presenter {
             @Override
             protected List<ItemBean> doInBackground(Void... params) {
                 DataService source = new DataService();
-                return source.get(type, page);
+                return source.getItems(type, page);
             }
 
             @Override
@@ -44,7 +44,7 @@ class ItemPresenter implements ItemContract.Presenter {
             @Override
             protected List<ItemBean> doInBackground(Void... params) {
                 DataService source = new DataService();
-                return source.get(url, page);
+                return source.getItems(url, page);
             }
 
             @Override

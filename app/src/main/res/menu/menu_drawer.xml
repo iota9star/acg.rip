@@ -3,8 +3,12 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/action_week"
+            android:icon="@drawable/ic_week_black_24dp"
+            android:title="@string/week" />
+        <item
             android:id="@+id/action_list"
-            android:icon="@drawable/ic_format_list_numbered_black_24dp"
+            android:icon="@drawable/ic_all_black_24dp"
             android:title="@string/all" />
         <item
             android:id="@+id/action_anime"
@@ -16,7 +20,7 @@
             android:title="@string/jp_tv" />
         <item
             android:id="@+id/action_variety"
-            android:icon="@drawable/ic_remove_from_queue_black_24dp"
+            android:icon="@drawable/ic_video_black_24dp"
             android:title="@string/variety" />
         <item
             android:id="@+id/action_music"
