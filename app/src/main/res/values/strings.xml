@@ -3,7 +3,7 @@
     <string name="share">分享</string>
     <string name="search">搜索</string>
     <string name="about">关于</string>
-    <string name="search_hint">请输入关键字</string>
+    <string name="search_hint">请输入关键字…</string>
     <string name="source">来源</string>
     <string name="version">版本</string>
 
@@ -27,4 +27,8 @@
     <string name="grade_app">给我评分</string>
     <string name="acg_rip">https://acg.rip/</string>
     <string name="week">每周</string>
+    <string name="search_view_hit">请输入关键字</string>
+    <string name="theme">主题管理</string>
+    <string name="current_theme">当前主题</string>
+    <string name="nightly_mode">夜间模式</string>
 </resources>

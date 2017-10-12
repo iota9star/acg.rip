@@ -12,15 +12,15 @@
             android:title="@string/all" />
         <item
             android:id="@+id/action_anime"
-            android:icon="@drawable/ic_live_tv_black_24dp"
+            android:icon="@drawable/ic_anime_black_24dp"
             android:title="@string/anime" />
         <item
             android:id="@+id/action_jp_tv"
-            android:icon="@drawable/ic_not_interested_black_24dp"
+            android:icon="@drawable/ic_jp_tv_black_24dp"
             android:title="@string/jp_tv" />
         <item
             android:id="@+id/action_variety"
-            android:icon="@drawable/ic_video_black_24dp"
+            android:icon="@drawable/ic_variety_black_24dp"
             android:title="@string/variety" />
         <item
             android:id="@+id/action_music"
@@ -28,11 +28,11 @@
             android:title="@string/music" />
         <item
             android:id="@+id/action_collection"
-            android:icon="@drawable/ic_card_giftcard_black_24dp"
+            android:icon="@drawable/ic_collection_black_24dp"
             android:title="@string/collection" />
         <item
             android:id="@+id/action_other"
-            android:icon="@drawable/ic_devices_other_black_24dp"
+            android:icon="@drawable/ic_others_black_24dp"
             android:title="@string/other" />
     </group>
 
@@ -40,7 +40,7 @@
         <menu>
             <item
                 android:id="@+id/action_about"
-                android:icon="@drawable/ic_info_outline_black_24dp"
+                android:icon="@drawable/ic_about_black_24dp"
                 android:title="@string/about" />
         </menu>
     </item>

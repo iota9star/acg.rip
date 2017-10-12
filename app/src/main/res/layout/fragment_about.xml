@@ -1,51 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
     android:scrollbars="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingEnd="@dimen/v8dp"
-        android:paddingStart="@dimen/v8dp">
-
+        android:paddingBottom="12dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="12dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/v8dp"
-            android:background="@drawable/bg_item">
+            android:layout_marginTop="24dp"
+            android:gravity="center">
 
             <ImageView
-                android:layout_width="@dimen/v64dp"
-                android:layout_height="@dimen/v64dp"
-                android:layout_margin="@dimen/v8dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="8dp"
                 android:src="@mipmap/app_icon"
                 tools:ignore="ContentDescription" />
-
-            <View
-                android:layout_width="@dimen/v2dp"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/v16dp"
-                android:background="#787878" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:padding="@dimen/v8dp"
-                android:shadowColor="#60606060"
-                android:shadowDx="3"
-                android:shadowDy="3"
-                android:shadowRadius="10"
+                android:padding="8dp"
                 android:text="@string/app_name"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/v36sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="36sp"
                 android:textStyle="bold|italic" />
         </LinearLayout>
 
@@ -53,84 +44,68 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/v8dp"
-            android:background="@drawable/bg_item"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/v8dp"
+                android:padding="8dp"
                 android:text="@string/source"
-                android:textColor="@color/colorAccent" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/v2dp"
-                android:layout_gravity="center"
-                android:background="@color/colorAccent" />
+                android:textColor="?colorAccent"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/text_view_acg_rip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:padding="@dimen/v8dp"
+                android:padding="8dp"
                 android:text="@string/app_name"
-                android:textSize="@dimen/v12sp" />
+                android:textColor="?android:textColorPrimary" />
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/v8dp"
-            android:background="@drawable/bg_item"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/v8dp"
+                android:padding="8dp"
                 android:text="@string/thx"
-                android:textColor="@color/colorAccent" />
+                android:textColor="?colorAccent"
+                android:textSize="18sp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/v2dp"
-                android:layout_gravity="center"
-                android:background="@color/colorAccent" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:lineSpacingExtra="@dimen/v8dp"
-                android:padding="@dimen/v8dp"
+                android:lineSpacingExtra="8dp"
+                android:padding="8dp"
                 android:text="@string/thx_content"
-                android:textSize="@dimen/v12sp" />
+                android:textColor="?android:textColorPrimary" />
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/v8dp"
-            android:background="@drawable/bg_item"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/v8dp"
+                android:padding="8dp"
                 android:text="@string/is_good"
-                android:textColor="@color/colorAccent" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/v2dp"
-                android:layout_gravity="center"
-                android:background="@color/colorAccent" />
+                android:textColor="?colorAccent"
+                android:textSize="18sp" />
 
 
             <TextView
@@ -139,34 +114,80 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:padding="@dimen/v8dp"
+                android:padding="8dp"
                 android:text="@string/grade_app"
-                android:textSize="@dimen/v12sp" />
+                android:textColor="?android:textColorPrimary" />
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/v96dp"
-            android:layout_marginTop="@dimen/v8dp"
-            android:background="@drawable/bg_item"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/v8dp"
-                android:text="@string/version"
-                android:textColor="@color/colorAccent" />
+                android:padding="8dp"
+                android:text="@string/theme"
+                android:textColor="?colorAccent"
+                android:textSize="18sp" />
 
-            <View
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_compat_dark"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/v2dp"
-                android:layout_gravity="center"
-                android:background="@color/colorAccent" />
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/nightly_mode"
+                android:textColor="?android:textColorPrimary" />
 
+            <LinearLayout
+                android:id="@+id/linear_layout_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/current_theme"
+                    android:textColor="?android:textColorPrimary" />
+
+                <ImageView
+                    android:id="@+id/image_view_point"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="4dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_item_theme_checked"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="96dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/version"
+                android:textColor="?colorAccent"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/text_view_version"
@@ -174,9 +195,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:padding="@dimen/v8dp"
-                android:textSize="@dimen/v12sp" />
+                android:padding="8dp"
+                android:textColor="?android:textColorPrimary" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

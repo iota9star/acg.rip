@@ -3,24 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
     android:orientation="vertical"
-    android:padding="@dimen/v16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:padding="16dp">
 
     <ImageView
-        android:layout_width="@dimen/v64dp"
-        android:layout_height="@dimen/v64dp"
-        android:layout_marginTop="@dimen/v64dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="64dp"
         android:src="@mipmap/app_icon"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/v8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/app_name"
-        android:textSize="@dimen/v16sp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
 </LinearLayout>

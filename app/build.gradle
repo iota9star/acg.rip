@@ -1,43 +1,65 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.jakewharton.butterknife'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "star.iota.acgrip"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 8
-        versionName "HELLO, ACG.RIP"
+        versionCode 10
+        versionName "Kotlin, ACG.RIP"
         resConfigs "zh"
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled true
-            shrinkResources true
             zipAlignEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+kapt {
+    generateStubs = true
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation ('com.android.support.test.espresso:espresso-core:3.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    testCompile 'junit:junit:4.12'
 
-    compile 'com.android.support:appcompat-v7:26.0.0'
-    compile 'com.android.support:design:26.0.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
 
-    compile 'com.jakewharton:butterknife:latest.release'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:latest.release'
-    compile 'com.scwang.smartrefresh:SmartRefreshLayout:latest.release'
-    compile 'com.scwang.smartrefresh:SmartRefreshHeader:latest.release'
-    compile 'org.jsoup:jsoup:latest.release'
-    compile 'jp.wasabeef:recyclerview-animators:latest.release'
-    compile 'com.liuguangqiang.cookie:library:latest.release'
-    compile 'com.nex3z:flow-layout:latest.release'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:latest.release'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:latest.release'
+    implementation 'org.jsoup:jsoup:latest.release'
+    implementation 'jp.wasabeef:recyclerview-animators:latest.release'
+    implementation 'com.liuguangqiang.cookie:library:latest.release'
+    implementation 'com.nex3z:flow-layout:latest.release'
+    implementation 'com.afollestad:aesthetic:latest.release'
+    implementation 'io.reactivex.rxjava2:rxjava:latest.release'
+    implementation 'io.reactivex.rxjava2:rxandroid:latest.release'
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
