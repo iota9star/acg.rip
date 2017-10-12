@@ -35,8 +35,6 @@
 -keepattributes Signature
 -keepattributes SourceFile,LineNumberTable
 
--repackageclasses
-
 -keep class org.jsoup.** { *; }
 
 -keep public class * extends android.app.Activity
