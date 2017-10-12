@@ -7,7 +7,6 @@ import star.iota.acgrip.R
 object ThemeHelper {
 
     private val THEME_ID = "theme_id"
-    private val THEME_DRAK = "theme_dark"
 
     private fun getSharePreference(context: Context): SharedPreferences {
         return context.getSharedPreferences("multiple_theme", Context.MODE_PRIVATE)

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector>
-    <!--<item android:drawable="@color/colorAccent" android:state_pressed="true" />-->
-    <!--<item android:drawable="@color/colorBackground" android:state_pressed="false" />-->
-    <!--<item android:drawable="@color/colorAccent" android:state_focused="true" />-->
-</selector>
