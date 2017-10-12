@@ -4,7 +4,7 @@ import io.reactivex.Flowable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import star.iota.acgrip.service.DataServiceImpl
+import star.iota.acgrip.service.DataRepository
 
 internal class FanPresenter(private val view: FanContract.View) : FanContract.Presenter {
 
@@ -18,7 +18,7 @@ internal class FanPresenter(private val view: FanContract.View) : FanContract.Pr
 
     override fun request(url: String) {
         Companion.compositeDisposable.add(
-                Flowable.just(DataServiceImpl())
+                Flowable.just(DataRepository())
                         .map { service -> service.getFans(url) }
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())

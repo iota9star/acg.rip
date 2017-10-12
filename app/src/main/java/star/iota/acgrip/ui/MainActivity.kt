@@ -74,7 +74,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         replaceFragmentInActivity(ItemFragment.newInstance(star.iota.acgrip.Menu.ALL.id, star.iota.acgrip.Menu.ALL.menu), R.id.frame_layout_container)
         if (Aesthetic.isFirstTime()) {
             Aesthetic.get()
-                    .isDark(true)
                     .activityTheme(R.style.AppTheme)
                     .textColorPrimaryRes(R.color.text_color_primary)
                     .textColorSecondaryRes(R.color.text_color_secondary)

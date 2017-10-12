@@ -4,7 +4,7 @@ import io.reactivex.Flowable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import star.iota.acgrip.service.DataServiceImpl
+import star.iota.acgrip.service.DataRepository
 
 internal class ItemPresenter(private val view: ItemContract.View) : ItemContract.Presenter {
     companion object {
@@ -17,7 +17,7 @@ internal class ItemPresenter(private val view: ItemContract.View) : ItemContract
 
     override fun request(type: Int, page: Int) {
         Companion.compositeDisposable.add(
-                Flowable.just(DataServiceImpl())
+                Flowable.just(DataRepository())
                         .map { service -> service.getItems(type, page) }
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
@@ -39,7 +39,7 @@ internal class ItemPresenter(private val view: ItemContract.View) : ItemContract
 
     override fun request(url: String, page: Int) {
         Companion.compositeDisposable.add(
-                Flowable.just(DataServiceImpl())
+                Flowable.just(DataRepository())
                         .map { service -> service.getItems(url, page) }
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
@@ -61,8 +61,8 @@ internal class ItemPresenter(private val view: ItemContract.View) : ItemContract
 
     override fun search(keywords: String, page: Int) {
         Companion.compositeDisposable.add(
-                Flowable.just(DataServiceImpl())
-                        .map { service -> service.getItems(keywords, page) }
+                Flowable.just(DataRepository())
+                        .map { service -> service.search(keywords, page) }
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(

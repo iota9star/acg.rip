@@ -5,9 +5,9 @@ import star.iota.acgrip.ui.fan.FansBean
 import star.iota.acgrip.ui.item.ItemBean
 import java.util.*
 
-class DataServiceImpl : DataService {
+class DataRepository {
 
-    override fun getItems(type: Int, page: Int): List<ItemBean>? {
+    fun getItems(type: Int, page: Int): List<ItemBean>? {
         val baseUrl: String = if (type == 0) {
             "https://acg.rip/page/" + page
         } else {
@@ -16,17 +16,17 @@ class DataServiceImpl : DataService {
         return getItems(baseUrl)
     }
 
-    override fun getItems(url: String, page: Int): List<ItemBean>? {
+    fun getItems(url: String, page: Int): List<ItemBean>? {
         val baseUrl = url + "/page/" + page
         return getItems(baseUrl)
     }
 
-    override fun search(keyword: String, page: Int): List<ItemBean>? {
+    fun search(keyword: String, page: Int): List<ItemBean>? {
         val baseUrl = "https://acg.rip/page/$page?term=$keyword"
         return getItems(baseUrl)
     }
 
-    override fun getItems(baseUrl: String): List<ItemBean>? {
+    private fun getItems(baseUrl: String): List<ItemBean>? {
         val beans = ArrayList<ItemBean>()
         val elements = Jsoup.connect(baseUrl)
                 .timeout(60000)
@@ -51,7 +51,7 @@ class DataServiceImpl : DataService {
         return beans
     }
 
-    override fun getFans(baseUrl: String): List<FansBean>? {
+    fun getFans(baseUrl: String): List<FansBean>? {
         val list = ArrayList<FansBean>()
         val document = Jsoup.connect(baseUrl)
                 .timeout(60000)
