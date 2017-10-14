@@ -30,4 +30,5 @@
     <string name="theme">主题管理</string>
     <string name="current_theme">当前主题</string>
     <string name="nightly_mode">夜间模式</string>
+    <string name="is_tint">是否改变顶栏颜色</string>
 </resources>

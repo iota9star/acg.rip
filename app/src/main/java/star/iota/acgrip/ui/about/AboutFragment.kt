@@ -31,6 +31,7 @@ class AboutFragment : BaseToolbarFragment(), View.OnClickListener {
     private lateinit var linearLayoutTheme: LinearLayout
     private lateinit var imageViewPoint: ImageView
     private lateinit var switchCompatDark: SwitchCompat
+    private lateinit var switchCompatTint: SwitchCompat
     private lateinit var isDarkSubscription: Disposable
 
     companion object {
@@ -59,9 +60,11 @@ class AboutFragment : BaseToolbarFragment(), View.OnClickListener {
         linearLayoutTheme = containerView!!.findViewById(R.id.linear_layout_theme)
         imageViewPoint = containerView!!.findViewById(R.id.image_view_point)
         switchCompatDark = containerView!!.findViewById(R.id.switch_compat_dark)
+        switchCompatTint = containerView!!.findViewById(R.id.switch_compat_tint)
         isDarkSubscription = Aesthetic.get()
                 .isDark
                 .subscribe { isDark -> switchCompatDark.isChecked = isDark!! }
+        switchCompatTint.isChecked = ThemeHelper.isTint(activity)
         switchCompatDark.setOnCheckedChangeListener { _, checked ->
             if (checked) {
                 Aesthetic.get()
@@ -76,6 +79,25 @@ class AboutFragment : BaseToolbarFragment(), View.OnClickListener {
                         .isDark(false)
                         .textColorPrimaryRes(R.color.text_color_primary)
                         .textColorSecondaryRes(R.color.text_color_secondary)
+                        .apply()
+            }
+        }
+        switchCompatTint.setOnCheckedChangeListener { _, checked ->
+            val theme = ThemeHelper.getTheme(activity)
+            ThemeHelper.setTint(activity, checked)
+            if (checked) {
+                Aesthetic.get()
+                        .colorPrimaryRes(theme)
+                        .colorAccentRes(theme)
+                        .colorStatusBarAuto()
+                        .colorNavigationBarAuto()
+                        .apply()
+            } else {
+                Aesthetic.get()
+                        .colorPrimaryRes(R.color.white)
+                        .colorAccentRes(theme)
+                        .colorStatusBarAuto()
+                        .colorNavigationBarAuto()
                         .apply()
             }
         }
@@ -123,12 +145,21 @@ class AboutFragment : BaseToolbarFragment(), View.OnClickListener {
                 ThemeHelper.setTheme(activity, theme.color)
                 imageViewPoint.setColorFilter(ContextCompat.getColor(activity, theme.color))
                 headerView.setBackgroundColor(ContextCompat.getColor(activity, theme.color))
-                Aesthetic.get()
-                        .colorPrimaryRes(R.color.white)
-                        .colorAccentRes(theme.color)
-                        .colorStatusBarAuto()
-                        .colorNavigationBarAuto()
-                        .apply()
+                if (ThemeHelper.isTint(activity)) {
+                    Aesthetic.get()
+                            .colorPrimaryRes(theme.color)
+                            .colorAccentRes(theme.color)
+                            .colorStatusBarAuto()
+                            .colorNavigationBarAuto()
+                            .apply()
+                } else {
+                    Aesthetic.get()
+                            .colorPrimaryRes(R.color.white)
+                            .colorAccentRes(theme.color)
+                            .colorStatusBarAuto()
+                            .colorNavigationBarAuto()
+                            .apply()
+                }
 //                when (theme.color) {
 //                    R.color.red,
 //                    R.color.pink,

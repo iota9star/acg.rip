@@ -144,6 +144,14 @@
                 android:text="@string/nightly_mode"
                 android:textColor="?android:textColorPrimary" />
 
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_compat_tint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/is_tint"
+                android:textColor="?android:textColorPrimary" />
+
             <LinearLayout
                 android:id="@+id/linear_layout_theme"
                 android:layout_width="match_parent"

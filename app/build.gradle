@@ -13,8 +13,8 @@ android {
         applicationId "star.iota.acgrip"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 10
-        versionName "Kotlin, ACG.RIP"
+        versionCode 11
+        versionName "POWER, ACG.RIP"
         resConfigs "zh"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
