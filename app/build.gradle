@@ -13,8 +13,8 @@ android {
         applicationId "star.iota.acgrip"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 11
-        versionName "POWER, ACG.RIP"
+        versionCode 12
+        versionName "POWER FINAL, ACG.RIP"
         resConfigs "zh"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -58,8 +58,5 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:latest.release'
     implementation 'io.reactivex.rxjava2:rxandroid:latest.release'
 
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
-}
-repositories {
-    mavenCentral()
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
 }
