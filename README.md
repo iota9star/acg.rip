@@ -13,7 +13,7 @@
 
 ## 分支
 
-+ [Java 分支](https://github.com/iota9star/ACG.RIP)
++ [Java 分支](https://github.com/iota9star/ACG.RIP/tree/java)
 + [Kotlin 分支](https://github.com/iota9star/ACG.RIP/tree/kotlin)
 
 ## 预览图效果
