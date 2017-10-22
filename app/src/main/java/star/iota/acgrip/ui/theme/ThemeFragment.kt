@@ -86,10 +86,12 @@ class ThemeFragment : BaseToolbarFragment() {
                 }
 
         switchCompatNightly.setOnCheckedChangeListener { _, isChecked ->
+            val theme = ThemeHelper.getTheme(activity)
             if (isChecked) {
                 Aesthetic.get()
                         .activityTheme(R.style.AppThemeDark)
                         .isDark(true)
+                        .colorAccent(theme)
                         .textColorPrimaryRes(R.color.text_color_primary_dark)
                         .textColorSecondaryRes(R.color.text_color_secondary_dark)
                         .apply()
@@ -97,6 +99,7 @@ class ThemeFragment : BaseToolbarFragment() {
                 Aesthetic.get()
                         .activityTheme(R.style.AppTheme)
                         .isDark(false)
+                        .colorAccent(theme)
                         .textColorPrimaryRes(R.color.text_color_primary)
                         .textColorSecondaryRes(R.color.text_color_secondary)
                         .apply()
