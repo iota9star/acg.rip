@@ -1,6 +1,21 @@
+/*
+ *    Copyright 2017. iota9star
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ */
+
 package star.iota.acgrip.ui.item
 
-import addFragmentToActivity
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -18,9 +33,10 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.ProgressBar
 import android.widget.TextView
-import star.iota.acgrip.Menu
+import star.iota.acgrip.Category
 import star.iota.acgrip.MessageBar
 import star.iota.acgrip.R
+import star.iota.acgrip.ext.addFragmentToActivity
 import java.util.*
 
 internal class ItemAdapter : RecyclerView.Adapter<ItemAdapter.MyViewHolder>() {
@@ -66,7 +82,7 @@ internal class ItemAdapter : RecyclerView.Adapter<ItemAdapter.MyViewHolder>() {
             holder.textViewSub.isClickable = true
             holder.textViewSub.text = item.sub
         }
-        holder.textViewSub.setOnClickListener { (holder.context as AppCompatActivity).addFragmentToActivity(ItemFragment.newInstance(Menu.URL.id, item.subLink, item.sub), R.id.frame_layout_container) }
+        holder.textViewSub.setOnClickListener { (holder.context as AppCompatActivity).addFragmentToActivity(ItemFragment.newInstance(Category.URL.id, item.subLink, item.sub), R.id.frame_layout_container) }
         holder.buttonInfo.setOnClickListener { showInfo(holder, item) }
     }
 

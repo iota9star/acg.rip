@@ -1,3 +1,19 @@
+/*
+ *    Copyright 2017. iota9star
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ */
+
 package star.iota.acgrip.ui.item
 
 import android.os.Bundle
@@ -7,11 +23,11 @@ import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener
 import jp.wasabeef.recyclerview.animators.LandingAnimator
-import star.iota.acgrip.Menu
+import star.iota.acgrip.Category
 import star.iota.acgrip.MessageBar
 import star.iota.acgrip.R
+import star.iota.acgrip.base.BaseToolbarFragment
 import star.iota.acgrip.ui.MainActivity
-import star.iota.jptv.base.BaseToolbarFragment
 
 
 class ItemFragment : BaseToolbarFragment(), ItemContract.View {
@@ -29,7 +45,7 @@ class ItemFragment : BaseToolbarFragment(), ItemContract.View {
     private var isLoading: Boolean = false
     private lateinit var param: String
 
-    override fun init() {
+    override fun doSome() {
         initConfig()
         initRecyclerView()
         initRefreshLayout()
@@ -40,9 +56,9 @@ class ItemFragment : BaseToolbarFragment(), ItemContract.View {
         isLoading = false
         presenter = ItemPresenter(this)
         page = 1
-        type = arguments.getInt("type", 0)
-        param = arguments.getString("param", "")
-        setTitle(arguments.getString("title", getString(R.string.app_name)))
+        type = arguments.getInt(PARAMS_TYPE, 0)
+        param = arguments.getString(PARAMS_KEY, "")
+        setTitle(arguments.getString(PARAMS_TITLE, getString(R.string.app_name)))
     }
 
     private fun initRecyclerView() {
@@ -86,8 +102,8 @@ class ItemFragment : BaseToolbarFragment(), ItemContract.View {
 
     private fun request(page: Int) {
         when (type) {
-            Menu.SEARCH.id -> presenter?.search(param, page)
-            Menu.URL.id -> presenter?.request(param, page)
+            Category.SEARCH.id -> presenter?.search(param, page)
+            Category.URL.id -> presenter?.request(param, page)
             else -> presenter?.request(type, page)
         }
     }
@@ -140,21 +156,25 @@ class ItemFragment : BaseToolbarFragment(), ItemContract.View {
     }
 
     companion object {
+        private val PARAMS_TITLE = "title"
+        private val PARAMS_TYPE = "type"
+        private val PARAMS_KEY = "key"
+
         fun newInstance(type: Int?, title: String?): ItemFragment {
             val fragment = ItemFragment()
             val bundle = Bundle()
-            bundle.putInt("type", type!!)
-            bundle.putString("title", title)
+            bundle.putInt(PARAMS_TYPE, type!!)
+            bundle.putString(PARAMS_TITLE, title)
             fragment.arguments = bundle
             return fragment
         }
 
-        fun newInstance(type: Int?, param: String?, title: String?): ItemFragment {
+        fun newInstance(type: Int?, key: String?, title: String?): ItemFragment {
             val fragment = ItemFragment()
             val bundle = Bundle()
-            bundle.putInt("type", type!!)
-            bundle.putString("title", title)
-            bundle.putString("param", param)
+            bundle.putInt(PARAMS_TYPE, type!!)
+            bundle.putString(PARAMS_TITLE, title)
+            bundle.putString(PARAMS_KEY, key)
             fragment.arguments = bundle
             return fragment
         }

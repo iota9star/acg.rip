@@ -1,3 +1,19 @@
+/*
+ *    Copyright 2017. iota9star
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ */
+
 package star.iota.acgrip.ui.fan
 
 import android.os.Bundle
@@ -8,8 +24,8 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener
 import jp.wasabeef.recyclerview.animators.LandingAnimator
 import star.iota.acgrip.MessageBar
 import star.iota.acgrip.R
+import star.iota.acgrip.base.BaseToolbarFragment
 import star.iota.acgrip.ui.MainActivity
-import star.iota.jptv.base.BaseToolbarFragment
 
 
 class FanFragment : BaseToolbarFragment(), FanContract.View {
@@ -25,7 +41,7 @@ class FanFragment : BaseToolbarFragment(), FanContract.View {
     private var isLoading: Boolean = false
     private lateinit var url: String
 
-    override fun init() {
+    override fun doSome() {
         initConfig()
         initRecyclerView()
         initRefreshLayout()
@@ -33,8 +49,8 @@ class FanFragment : BaseToolbarFragment(), FanContract.View {
 
     private fun initConfig() {
         presenter = FanPresenter(this)
-        url = arguments.getString("url")
-        setTitle(arguments.getString("title", getString(R.string.app_name)))
+        url = arguments.getString(PARAMS_URL)
+        setTitle(arguments.getString(PARAMS_TITLE, getString(R.string.app_name)))
     }
 
     private fun initRecyclerView() {
@@ -102,6 +118,8 @@ class FanFragment : BaseToolbarFragment(), FanContract.View {
     }
 
     companion object {
+        private val PARAMS_TITLE = "title"
+        private val PARAMS_URL = "url"
         fun newInstance(url: String?, title: String?): FanFragment {
             val fragment = FanFragment()
             val bundle = Bundle()

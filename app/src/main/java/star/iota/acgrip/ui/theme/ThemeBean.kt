@@ -14,8 +14,12 @@
  *    limitations under the License.
  */
 
-package star.iota.acgrip.base
+package star.iota.acgrip.ui.theme
 
-interface BasePresenter {
-    fun unsubscribe()
-}
+import android.support.annotation.ColorRes
+
+class ThemeBean(
+        @ColorRes val color: Int,
+        val description: String,
+        var isSelected: Boolean
+)
