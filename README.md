@@ -1,4 +1,4 @@
-![](https://github.com/iota9star/ACG.RIP/blob/master/app/src/main/res/mipmap-xxxhdpi/app_icon.png?raw=true)
+![](http://r.photo.store.qq.com/psb?/V12tx9ch2GA3dz/FqLQBHE23P.c*XKPM4RI*6*aL0mdnoww*2zSjghMKn8!/r/dPIAAAAAAAAA)
 
 # ACG.RIP - ｸﾞｯ!(๑•̀ㅂ•́)و✧ 长的帅就是6
 
@@ -38,7 +38,7 @@
 
 ## Licenses
 ```
-   Copyright 2017 iota9star
+   Copyright 2017. iota9star
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
